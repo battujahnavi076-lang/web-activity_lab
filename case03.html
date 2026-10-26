@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+    <link rel="stylesheet" href="case03.css">
+</head>
+<body>
+
+<header>
+    <h2>LearnHub</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#courses">Courses</a>
+        <a href="#progress">My Progress</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Learn New Skills Online</h1>
+    <p>Discover courses and build your future with LearnHub.</p>
+    <a href="#courses" class="btn">Explore Courses</a>
+</section>
+
+<section id="categories" class="section">
+    <h2>Course Categories</h2>
+    <div class="grid">
+        <div class="category">💻 Programming</div>
+        <div class="category">🎨 Web Design</div>
+        <div class="category">📊 Data Science</div>
+        <div class="category">🚀 Career Skills</div>
+    </div>
+</section>
+
+<section id="courses" class="section alternate">
+    <h2>Popular Courses</h2>
+
+    <div class="grid">
+        <div class="course-card">
+            <div class="course-image purple">💻</div>
+            <h3>Web Development</h3>
+            <p>Instructor: Alex Morgan</p>
+            <p>Learn HTML, CSS and JavaScript.</p>
+            <p><strong>Duration:</strong> 6 weeks</p>
+            <h4>Learning Objectives</h4>
+            <ul>
+                <li>Create HTML webpages</li>
+                <li>Style websites using CSS</li>
+                <li>Add interactive features</li>
+            </ul>
+            <button class="btn" onclick="enroll(this)">Enroll Now</button>
+            <p class="message"></p>
+        </div>
+
+        <div class="course-card">
+            <div class="course-image blue">🐍</div>
+            <h3>Python Programming</h3>
+            <p>Instructor: Sarah Lee</p>
+            <p>Learn Python fundamentals and programming logic.</p>
+            <p><strong>Duration:</strong> 4 weeks</p>
+            <h4>Learning Objectives</h4>
+            <ul>
+                <li>Understand variables and data types</li>
+                <li>Use loops and conditions</li>
+                <li>Write simple Python programs</li>
+            </ul>
+            <button class="btn" onclick="enroll(this)">Enroll Now</button>
+            <p class="message"></p>
+        </div>
+
+        <div class="course-card">
+            <div class="course-image pink">🎨</div>
+            <h3>UI/UX Design</h3>
+            <p>Instructor: Emma Wilson</p>
+            <p>Learn visual design and user-friendly layouts.</p>
+            <p><strong>Duration:</strong> 5 weeks</p>
+            <h4>Learning Objectives</h4>
+            <ul>
+                <li>Understand color and typography</li>
+                <li>Create page layouts</li>
+                <li>Improve user experience</li>
+            </ul>
+            <button class="btn" onclick="enroll(this)">Enroll Now</button>
+            <p class="message"></p>
+        </div>
+
+        <div class="course-card">
+            <div class="course-image orange">📊</div>
+            <h3>Data Science Basics</h3>
+            <p>Instructor: David James</p>
+            <p>Explore data, charts and basic analysis.</p>
+            <p><strong>Duration:</strong> 8 weeks</p>
+            <h4>Learning Objectives</h4>
+            <ul>
+                <li>Understand data analysis</li>
+                <li>Interpret charts and tables</li>
+                <li>Explore basic statistics</li>
+            </ul>
+            <button class="btn" onclick="enroll(this)">Enroll Now</button>
+            <p class="message"></p>
+        </div>
+    </div>
+</section>
+
+<section id="progress" class="section">
+    <h2>My Learning Progress</h2>
+    <div class="progress-card">
+        <p>Web Development — 65%</p>
+        <div class="progress"><span style="width:65%"></span></div>
+        <p>Python Programming — 40%</p>
+        <div class="progress"><span style="width:40%"></span></div>
+        <p>UI/UX Design — 25%</p>
+        <div class="progress"><span style="width:25%"></span></div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 LearnHub Online Learning Platform</p>
+</footer>
+
+<script>
+    function enroll(button) {
+        const card = button.closest(".course-card");
+        card.querySelector(".message").textContent =
+            "Your enrollment request has been selected!";
+        button.textContent = "Selected";
+    }
+</script>
+
+</body>
+</html>
